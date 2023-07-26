@@ -222,7 +222,8 @@ analyzeTPPTR <- function(configTable, data = NULL, resultPath = NULL,
   if (normalize){
     normResults <- tpptrNormalize(data=trData, normReqs = normReqs, 
                                   qcPlotTheme = ggplotTheme, qcPlotPath = NULL, 
-                                  fixedReference = fixedReference)
+                                  fixedReference = fixedReference,
+                                  maxAttempts = maxAttempts)
     trDataNormalized <- normResults[["normData"]]
     ## Save normalized data:
     if (flagDoWrite){
